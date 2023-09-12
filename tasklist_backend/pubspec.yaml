@@ -11,9 +11,12 @@ dependencies:
   crypto: ^3.0.3
   dart_frog: ^1.0.0
   equatable: ^2.0.5
+  firedart: ^0.9.7
   json_annotation: ^4.8.1
   json_serializable: ^6.7.1
   meta: ^1.10.0
+  mongo_dart: ^0.9.1
+  postgres: ^2.6.2
 
 dev_dependencies:
   mocktail: ^1.0.0

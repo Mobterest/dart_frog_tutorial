@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:dart_frog/dart_frog.dart';
-import 'package:tasklist_backend/lists/list_Repository.dart';
+import 'package:tasklist_backend/repository/lists/list_Repository.dart';
 
 Future<Response> onRequest(RequestContext context) async {
   return switch (context.request.method) {
@@ -13,7 +13,7 @@ Future<Response> onRequest(RequestContext context) async {
 Future<Response> _createList(RequestContext context) async {
   final body = await context.request.json() as Map<String, dynamic>;
 
-  final name = body['name'] as String;
+  final name = body['name'] as String?;
 
   final listRepository = context.read<TaskListRepository>();
 

@@ -10,13 +10,18 @@ dependencies:
   build_runner: ^2.4.6
   crypto: ^3.0.3
   dart_frog: ^1.0.0
+  dart_frog_auth: ^1.1.0
+  dart_frog_web_socket: ^1.0.0
   equatable: ^2.0.5
   firedart: ^0.9.7
+  http: ^1.1.0
   json_annotation: ^4.8.1
   json_serializable: ^6.7.1
   meta: ^1.10.0
   mongo_dart: ^0.9.1
   postgres: ^2.6.2
+  redis: ^3.1.0
+  shelf_cors_headers: ^0.1.5
 
 dev_dependencies:
   mocktail: ^1.0.0

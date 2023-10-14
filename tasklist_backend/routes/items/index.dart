@@ -14,6 +14,8 @@ Future<Response> onRequest(RequestContext context) async {
 Future<Response> _getAllItems(RequestContext context) async {
   final items = context.read<TaskItemRepository>().getAllItems();
 
+  print(items);
+
   return Response.json(body: items);
 }
 
@@ -23,8 +25,6 @@ Future<Response> _createItem(RequestContext context) async {
   final name = body['name'] as String?;
   final description = body['description'] as String?;
   final status = body['status'] as bool?;
-
-
 
   final itemRepository = context.read<TaskItemRepository>();
 

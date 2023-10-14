@@ -13,7 +13,8 @@ Handler middleware(Handler handler) {
             return repository.userFromCredentials(username, password);
           },
           applies: (RequestContext context) async =>
-              context.request.method != HttpMethod.post,
+              context.request.method != HttpMethod.post &&
+              context.request.method != HttpMethod.delete,
         ),
       )
       .use(provider<UserRepository>((_) => userRepository));

@@ -1,0 +1,20 @@
+{
+    "redis": {
+      "host": "localhost",
+      "port": 8091,
+      "username": "default",
+      "password": "<PASSWORD>",
+      "auth_command": "AUTH"
+    },
+    "restapi": {
+      "url": "https://low-carb-recipes.p.rapidapi.com/random",
+      "key": "<KEY>",
+      "host": "low-carb-recipes.p.rapidapi.com"
+    },
+    "openai": {
+      "key": "<KEY>"
+    },
+    "files":{
+      "public_path": "<PATH_TO_>/public/"
+    }
+  }

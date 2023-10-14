@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:dart_frog/dart_frog.dart'; 
+import 'package:dart_frog/dart_frog.dart';
 import 'package:tasklist_backend/repository/lists/list_Repository.dart';
 
 Future<Response> onRequest(
@@ -33,7 +33,7 @@ Future<Response> _updateList(RequestContext context, String id) async {
 
   if (name != null) {
     await listRepository.updateList(id: id, name: name);
-    return Response(statusCode: HttpStatus.noContent);
+    return Response.json(body: {'id': id});
   } else {
     return Response(statusCode: HttpStatus.badRequest);
   }
